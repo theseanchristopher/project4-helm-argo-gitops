@@ -4,7 +4,8 @@ replicaCount: 2
 
 image:
   # For now, just a placeholder tag. CI will update this later.
-  tag: "dev-latest"
+# tag: "dev-latest"
+  tag: "v1"
 
 ingress:
   hosts:

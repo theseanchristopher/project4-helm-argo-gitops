@@ -3,7 +3,8 @@
 replicaCount: 3
 
 image:
-  tag: "prod-latest"
+# tag: "prod-latest"
+  tag: "v1"
 
 ingress:
   hosts:
