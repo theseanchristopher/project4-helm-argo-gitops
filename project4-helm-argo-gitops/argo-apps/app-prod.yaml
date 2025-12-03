@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: project4-app-prod
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/theseanchristopher>/project4-helm-argo-gitops.git
+    targetRevision: project4-gitops
+    path: charts/app
+    helm:
+      valueFiles:
+        - values-prod.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: project3-prod
+  syncPolicy:
+    # No "automated" block here → manual sync for prod
+    syncOptions:
+      - CreateNamespace=true
+

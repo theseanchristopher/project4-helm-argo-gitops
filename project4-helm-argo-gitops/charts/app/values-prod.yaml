@@ -1,0 +1,20 @@
+# Prod environment overrides
+
+replicaCount: 3
+
+image:
+  tag: "prod-latest"
+
+ingress:
+  hosts:
+    - host: project4-prod.seanxtopher.com
+      paths:
+        - path: /
+          pathType: Prefix
+
+autoscaling:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 8
+  targetCPUUtilizationPercentage: 60
+
