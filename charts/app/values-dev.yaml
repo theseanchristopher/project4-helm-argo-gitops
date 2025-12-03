@@ -1,19 +1,15 @@
 # Dev environment overrides
 
 replicaCount: 2
-
 image:
   # For now, just a placeholder tag. CI will update this later.
-# tag: "dev-latest"
-  tag: "v1"
-
+  # tag: "dev-latest"
+  tag: "cfddcc0d4c2a5798f529485c3b1cc575a82a791c"
 ingress:
   hosts:
     - host: project4-dev.seanxtopher.com
       paths:
         - path: /
           pathType: Prefix
-
 autoscaling:
   enabled: false
-
