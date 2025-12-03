@@ -1,6 +1,6 @@
 # Dev environment overrides
 
-replicaCount: 2
+replicaCount: 1
 image:
   tag: "cfddcc0d4c2a5798f529485c3b1cc575a82a791c"
 ingress:
