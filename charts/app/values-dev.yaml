@@ -2,8 +2,6 @@
 
 replicaCount: 2
 image:
-  # For now, just a placeholder tag. CI will update this later.
-  # tag: "dev-latest"
   tag: "cfddcc0d4c2a5798f529485c3b1cc575a82a791c"
 ingress:
   hosts:
