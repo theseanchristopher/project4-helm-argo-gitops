@@ -2,7 +2,7 @@
 
 replicaCount: 1
 image:
-  tag: "faf7132232f241eef0c7da742870d36755ea87f3"
+  tag: "b5832fd5b9bcff7fe1444b314f57ded454443e81"
 ingress:
   hosts:
     - host: project4-dev.seanxtopher.com
