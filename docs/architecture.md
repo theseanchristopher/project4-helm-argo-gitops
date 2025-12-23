@@ -6,11 +6,13 @@ This document explains the architecture of Project 4, which implements a Helm-ba
 
 ## High-Level Flow
 
-1. Developer commits code to Project 1.
-2. GitHub Actions builds the Docker image and pushes to ECR.
-3. CI updates `values-dev.yaml` in Project 4's GitOps repo.
-4. Argo CD auto-syncs the dev Application.
-5. Prod requires manual promotion by updating `values-prod.yaml`.
+1. A developer commits application code to Project 1.
+2. GitHub Actions builds a Docker image and pushes it to Amazon ECR.
+3. The CI pipeline updates the image tag in `values-dev.yaml` in the Project 4 GitOps repository.
+4. Argo CD automatically syncs the dev Application and deploys to EKS.
+5. Production deployment requires:
+   - A manual update to `values-prod.yaml`
+   - A manual sync of the prod Argo CD Application
 
 ## Components
 

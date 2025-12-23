@@ -35,7 +35,7 @@ project4-helm-argo-gitops/
 
 ## 2. Deployment Flow (High-Level)
 
-1. A developer pushes code to the **Project 1** repository on branch `project3-gitops`.
+1. A developer pushes code to the **Project 1** repository on a GitOps integration branch.
 2. GitHub Actions builds a Docker image and pushes it to Amazon ECR.
 3. The pipeline checks out this repository and updates the image tag inside `values-dev.yaml`.
 4. The change is pushed to the `project4-gitops` branch.
@@ -141,7 +141,7 @@ This project intentionally deploys to the **same namespaces created during Proje
 
 ### Why?
 
-To simulate a **real-world migration** from:
+This project intentionally demonstrates a tooling migration from Kustomize to Helm while preserving existing environments and infrastructure.
 
 > **Project 3:** Kustomize‑based GitOps  
 > →  
@@ -172,14 +172,7 @@ Dev does not use autoscaling to keep resource usage minimal.
 
 ## 10. Summary
 
-Project 4 provides:
+Project 4 demonstrates a Helm-based GitOps deployment model using Argo CD, with automated delivery to development and controlled, manual promotion to production.
 
-- A complete **Helm-based GitOps workflow**
-- Multi-environment promotion (dev → prod)
-- CI-driven automation through Project 1
-- Seamless migration from Kustomize to Helm
-- Production-ready AWS ALB Ingress + TLS
-- Argo CD–powered deployment management
-
-This represents a real-world, enterprise-grade GitOps deployment model.
+It builds on earlier GitOps patterns by replacing Kustomize with Helm while preserving existing environments, namespaces, and operational workflows.
 

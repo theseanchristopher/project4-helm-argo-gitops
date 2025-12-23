@@ -9,10 +9,9 @@ Project 4 replaces Kustomize with Helm.
 
 ## Why Keep the Same Namespaces?
 
-To simulate a real-world migration:
-- Keep environments consistent
-- Replace tooling without redeploying infra
-- Allow Argo CD to seamlessly manage new manifests
+Project 4 intentionally deploys into the existing `project3-dev` and `project3-prod` namespaces to demonstrate a tooling migration from Kustomize to Helm without changing environments or infrastructure.
+
+This mirrors real-world platform evolution, where deployment tooling changes while clusters, namespaces, and Argo CD Applications remain stable.
 
 ## Benefits
 
